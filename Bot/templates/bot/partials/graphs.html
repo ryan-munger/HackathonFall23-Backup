@@ -1,0 +1,21 @@
+{% extends 'question_area.html' %}
+{% block question_content %}
+<label class="fw-bold">Create a graph!</label>
+
+<label for="a">Value for constant</label>
+<input type="number" name="a" id="a" value="0">
+<label for="b">Value for squared term</label>
+<input type="number" name="b" id="b" value="0">
+<label for="c">Value for cubed term</label>
+<input type="number" name="c" id="c" value="0">
+<label for="d">Value for fourth power term</label>
+<input type="number" name="d" id="d" value="0">
+<label for="e">Value for fifth power term</label>
+<input type="number" name="e" id="e" value="0">
+<label for="isPlot">Is a plot (default is a coordinate plane)</label>
+<input type="checkbox" name="isPlot" id="isPlot">
+<label for="x_min">X-Min</label>
+<input type="number" name="x_min" id="x_min" value="-10">
+<label for="x_max">X-Max</label>
+<input type="number" name="x_max" id="x_max" value="10">
+{% endblock %}

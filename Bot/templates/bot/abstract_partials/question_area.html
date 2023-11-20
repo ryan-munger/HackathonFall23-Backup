@@ -1,0 +1,13 @@
+<form>
+  <input name="questionType" value="{{ question_type }}" hidden>
+{% block question_content %}
+{% endblock %}
+  <button
+    class="btn btn-danger mt-2"
+    hx-post="{% url 'answer_question' %}"
+    hx-indicator="#spinner"
+    hx-target="#answerBox">
+    Ask
+  </button>
+</div>
+</form>

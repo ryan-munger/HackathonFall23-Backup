@@ -1,0 +1,16 @@
+{% load static %}
+<img src="{% static answer %}">
+
+<div hx-swap-oob="innerHTML:#preivousQuestionHeader">
+  <h3 class="fw-bold text-center">Previous Questions</h3>
+</div>
+
+<div
+  hx-swap-oob="afterbegin:#previousQuestions">
+  <div class="row border-bottom" >
+    <div class="col text-center">{{ question }}</div>
+    <div class="col text-center">
+      <img src="{% static answer %}">
+    </div>
+  </div>
+</div>

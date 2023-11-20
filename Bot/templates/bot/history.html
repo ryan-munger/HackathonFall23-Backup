@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load tz %}
+{% block title %}History{% endblock %}
+{% block content %}
+<h1>Questions Asked</h1>
+<div class="container"
+  style="max-height: 400px; overflow-y:auto;"
+>
+  <div class="row fw-bold">
+    <div class="col">Question</div>
+    <div class="col">Answer</div>
+    <div class="col">Time Asked</div>
+  </div>
+{% for question in student.text_question_test_answers.all %}
+  <div class="row">
+    <div class="col">{{ question.question }}</div>
+    <div class="col">{{ question.answer }}</div>
+    <div class="col">{{ question.date_asked|date:"F j, Y, g:i a" }}</div>
+  </div>
+{% endfor %}
+</div>
+{% endblock %}

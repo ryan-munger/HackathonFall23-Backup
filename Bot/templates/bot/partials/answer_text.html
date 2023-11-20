@@ -1,0 +1,13 @@
+<h4 class="text-center border">{{ answer }}</h4>
+
+<div hx-swap-oob="innerHTML:#preivousQuestionHeader">
+  <h3 class="fw-bold text-center">Previous Questions</h3>
+</div>
+
+<div
+  hx-swap-oob="afterbegin:#previousQuestions">
+  <div class="row border-bottom" >
+    <div class="col text-center">{{ question }}</div>
+    <div class="col text-center">{{ answer }}</div>
+  </div>
+</div>
